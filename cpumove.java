@@ -31,7 +31,13 @@ public class cpumove {
             board = shiftr.shiftRight(board, row);
             main.gravity(board);
         }
-        System.out.println("CPU shifted row " + row +" to the " + dir + "!");
+        String dec;
+        if (dir == 0) {
+            dec = "left";
+        } else {
+            dec = "right";
+        }
+        System.out.println("CPU shifted row " + row +" to the " + dec + "!");
         boolean l = check.check(board, " B ");
         print.printBoard(board);
         if (!l) {
