@@ -51,8 +51,10 @@ public class playermove {
                 valid = true;
             }
         }
-        check.check(board, " R ");
+        boolean l = check.check(board, " R ");
         print.printBoard(board);
-        cpu.move(board);
+        if (!l) {
+            cpu.move(board);
+        }
     }
 }
