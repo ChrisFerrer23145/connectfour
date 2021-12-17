@@ -29,9 +29,11 @@ public class cpumove {
         } else {
             shiftr.shiftRight(board, row);
         }
-        System.out.println("CPU shifted row " + row +"!");
-        check.check(board, " B ");
+        System.out.println("CPU shifted row " + row +" to the " + dir + "!");
+        boolean l = check.check(board, " B ");
         print.printBoard(board);
-        player.move(board);
+        if (!l) {
+            player.move(board);
+        }
     }
 }
