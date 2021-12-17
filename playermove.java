@@ -45,9 +45,11 @@ public class playermove {
             dir = scan.nextInt();
             if (dir <= 0) {
                 board = shiftl.shiftLeft(board, row);
+                main.gravity(board);
                 valid = true;
             } else {
                 board = shiftr.shiftRight(board, row);
+                main.gravity(board);
                 valid = true;
             }
         }
