@@ -26,8 +26,10 @@ public class cpumove {
         dir = (int)(Math.random() * 2);
         if (dir == 0) {
             board = shiftl.shiftLeft(board, row);
+            main.gravity(board);
         } else {
             board = shiftr.shiftRight(board, row);
+            main.gravity(board);
         }
         System.out.println("CPU shifted row " + row +" to the " + dir + "!");
         boolean l = check.check(board, " B ");
